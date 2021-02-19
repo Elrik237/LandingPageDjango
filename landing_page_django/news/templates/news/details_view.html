@@ -1,0 +1,15 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ arctile.title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ arctile.title }}</h1>
+        <p>{{ arctile.date }}</p>
+        <p>{{ arctile.full_text }}</p>
+        <a href="{% url 'news-delete' arctile.id %}" class="btn btn-danger">Удалить</a>
+        <a href="{% url 'news-update' arctile.id %}" class="btn btn-warning">Редактировать</a>
+        <a href="{% url 'news-home' %}" class="btn btn-info">Вернуться к новостям</a>
+
+    </div>
+{% endblock %}

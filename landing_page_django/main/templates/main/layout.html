@@ -14,13 +14,15 @@
 </head>
 <body>
     <aside>
-        <img src="{% static 'main/img/clover.svg' %}" alt="Лого">
-        <span class="logo">Clover</span>
+        <a href="{% url 'home' %}"><img src="{% static 'main/img/clover.svg' %}" alt="Лого"></a>
+        <a href="{% url 'home' %}"><span class="logo">Clover</span></a>
         <h3>Навигация</h3>
         <ul>
             <a href="{% url 'home' %}"><li><i class="fas fa-home"></i> Главная</li></a>
             <a href="{% url 'about' %}"><li><i class="fas fa-address-card"></i> Про нас</li></a>
-            <a href=""><li><i class="fas fa-mobile"></i> Контакты</li></a>
+            <a href="{% url 'news-home' %}"><li><i class="fas fa-newspaper"></i> Новости</li></a>
+            <a href=""><li><i class="fas fa-mobile"></i> Контакты</li></a><br>
+            <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>Добавить запись</button></li></a>
         </ul>
     </aside>
     <main>
